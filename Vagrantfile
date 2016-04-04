@@ -68,4 +68,5 @@ Vagrant.configure(2) do |config|
   #   sudo apt-get update
   #   sudo apt-get install -y apache2
   # SHELL
+  config.vm.provision "shell", inline: "sudo timedatectl set-timezone Asia/Tokyo"
 end

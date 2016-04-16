@@ -69,4 +69,5 @@ Vagrant.configure(2) do |config|
   #   sudo apt-get install -y apache2
   # SHELL
   config.vm.provision "shell", inline: "sudo timedatectl set-timezone Asia/Tokyo"
+  config.vm.provision "shell", path: "install_pkg.sh",:privileged => true
 end

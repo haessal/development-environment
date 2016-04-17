@@ -70,4 +70,6 @@ Vagrant.configure(2) do |config|
   # SHELL
   config.vm.provision "shell", inline: "sudo timedatectl set-timezone Asia/Tokyo"
   config.vm.provision "shell", path: "install_pkg.sh",:privileged => true
+  config.vm.provision "shell", path: "setup_git_prompt.sh",:privileged => false
+  config.vm.provision "file", source: "~/.gitconfig", destination: ".gitconfig"
 end

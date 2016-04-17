@@ -6,3 +6,4 @@ yum makecache fast
 
 echo "*** yum install packages ***"
 yum -y install vim
+yum -y install git
